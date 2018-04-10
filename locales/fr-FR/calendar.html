@@ -1,0 +1,105 @@
+<script type="text/x-red" data-help-name="google calendar in">
+  <p>Envoie un message chaque fois qu'un événement se produit dans un
+    <a target="_blank" href="https://www.google.com/calendar">calendrier Google</a>.
+  </p>
+  <p>Le message envoyé depuis le node aura les propriétés suivantes :
+    <ul>
+      <li><b>title</b> - le titre de l'événement</li>
+      <li><b>description</b> - la description de l'événement</li>
+      <li><b>location.description</b> - l'endroit où se déroule l'événement</li>
+      <li><b>data</b> - l'événement brut tel que Google Calendar le retourne
+      comme c'est décrit dans
+      <a target="_blank" href="https://developers.google.com/google-apps/calendar/v3/reference/events/list">
+        la liste d'API des évènements
+      </a>
+      </li>
+      <li><b>payload</b> est un objet qui contient:
+      <ul>
+        <li><b>title</b> - le titre de l'événement</li>
+        <li><b>description</b> - la description de l'événement</li>
+        <li><b>location.description</b> - l'endroit où se déroule
+        l'événement</li>
+        <li><b>start</b> - Date Javascript du début - minuit pour un
+        événement durant la journée entière</li>
+        <li><b>end</b> - Date Javascript de fin - minuit pour un
+        événement durant la journée entière</li>
+        <li><b>allDayEvent</b> - true si l'événement dure la journée</li>
+        <li><b>creator</b> - un objet contenant tous les détails concernant
+        les noms et les mails de l'événement</li>
+        <li><b>attendees</b> - liste des objets contenant les propriétés
+        des noms et emails</li>
+      </ul>
+      </li>
+    </ul>
+  </p>
+</script>
+
+<script type="text/x-red" data-help-name="google calendar">
+  <p>Retourne le prochain événement dans un
+    <a target="_blank" href="https://www.google.com/calendar">Google Calendar</a>.
+  </p>
+  <p>Le message d'entrée peut donner les propriétés suivantes :
+    <ul>
+      <li><b>payload</b> - un texte de recherche utilisé pour sélctionner
+      un événement pertinent. S'il est vide recherche le prochain événement
+      du calendrier. Si c'est un string recherche le prochain événement
+      qui a pour titre la valeur du string.</li>
+      <li><b>calendar</b> - le calendrier pour retrouver l'événement
+      (optionnel, par défaut : propriété du node calendar ou le calendrier
+      principal de l'utilisateur)</li>
+    </ul>
+  </p>
+  <p>Le message envoyé depuis le node aura les propriétés suivantes :
+    <ul>
+      <li><b>title</b> - le titre de l'événement</li>
+      <li><b>description</b> - la description de l'événement</li>
+      <li><b>location.description</b> - l'endroit où se déroule l'événement</li>
+      <li><b>data</b> - l'événement brut tel que Google Calendar le retourne
+      comme c'est décrit dans
+      <a target="_blank" href="https://developers.google.com/google-apps/calendar/v3/reference/events/list">
+        la liste d'API des évènements
+      </a>
+      </li>
+      <li><b>payload</b> - un objet qui contient:
+      <ul>
+        <li><b>title</b> - le titre de l'événement</li>
+        <li><b>description</b> - la description de l'événement</li>
+        <li><b>location.description</b> - l'endroit où se déroule
+        l'événement</li>
+        <li><b>start</b> - Javascript Date du début - minuit pour un
+        événement durant la journée entière</li>
+        <li><b>end</b> - Javascript Date de fin - minuit pour un
+        événement durant la journée entière</li>
+        <li><b>allDayEvent</b> - true si l'événement dure la journée</li>
+        <li><b>creator</b> - un objet contenant tous les détails concernant
+        les noms et les mails de l'événement</li>
+        <li><b>attendees</b> - liste des objets contenant les propriétés
+        des noms et emails</li>
+      </ul>
+      </li>
+    </ul>
+  </p>
+</script>
+
+<script type="text/x-red" data-help-name="google calendar out">
+  <p>Crée une entrée dans un
+    <a target="_blank" href="https://www.google.com/calendar">Google Calendar</a>.
+  </p>
+  <p>Le message d'entrée peut donner les propriétés suivantes :
+    <ul>
+      <li><b>payload</b> - un string pour décrire l'événement à l'aide du
+      <a target="_blank" href="https://support.google.com/calendar/answer/36604?hl=en">
+      quick add format
+      </a> ou un objet représentant le corps de la requète pour une
+      <a target="_blank" href="https://developers.google.com/google-apps/calendar/v3/reference/events/insert">
+        requète d'insertion
+      </a></li>
+      <li><b>calendar</b> - le calendrier pour ajouter l'événement (optionnel,
+      par défaut : propriété du node calendar ou le calendrier principal
+      de l'utilisateur)</li>
+      <li><b>sendNotifications</b> - un booléen pour déterminer si une
+      notification doit être envoyée aux personnes concernées (optionnel,
+      par défaut : false)</li>
+    </ul>
+  </p>
+</script>

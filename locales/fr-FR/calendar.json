@@ -1,0 +1,39 @@
+{
+  "calendar-in": {
+    "google": {
+      "label": "Google",
+      "input": "Ajouter des nouveaux identifiants Google..."
+    },
+    "calendar": "Calendrier",
+    "condition": {
+      "text1": "Envoyer le message",
+      "offset-type": {
+        "at": "au/à",
+        "before": "avant",
+        "after": "après"
+      },
+      "the": "le/la",
+      "offset-from": {
+        "start": "début",
+        "end": "fin"
+      },
+      "text2": "de chaque événement.",
+      "offset-units": {
+        "seconds": "secondes",
+        "minutes": "minutes",
+        "hours": "heures",
+        "days": "jours"
+      },
+      "text3": "Choisissez votre timing :"
+    },
+    "name": "Nom"
+  },
+  "calendar": {
+    "google": {
+      "label": "Google",
+      "input": "Ajouter des nouveaux identifiants Google..."
+    },
+    "calendar": "Calendrier",
+    "name": "Nom"
+  }
+}

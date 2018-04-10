@@ -1,0 +1,41 @@
+{
+  "calendar-in": {
+    "google": {
+      "label": "Google",
+      "input": "Add new Google credentials.."
+
+    },
+    "calendar": "Calendar",
+    "condition": {
+      "text1": "Inject message",
+      "offset-type": {
+        "at": "at",
+        "before": "before",
+        "after": "after"
+      },
+      "the": "the",
+      "offset-from": {
+        "start": "start",
+        "end": "end"
+      },
+      "text2": "of each event.",
+      "offset-units": {
+        "seconds": "seconds",
+        "minutes": "minutes",
+        "hours": "hours",
+        "days": "days"
+      },
+      "text3": "Choose your timing :"
+    },
+    "name": "Name"
+  },
+  "calendar": {
+    "google": {
+      "label": "Google",
+      "input": "Add new Google credentials.."
+
+    },
+    "calendar": "Calendar",
+    "name": "Name"
+  }
+}

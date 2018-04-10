@@ -1,0 +1,19 @@
+{
+  "name": "ttb-node-google-calendar",
+  "version": "0.0.1",
+  "description": "These nodes allow to consult, create, or notify events in your google calendar. Modified for thethingbox. Works with google-auth node.",
+  "node-red": {
+      "nodes": {
+          "calendar": "calendar.js"
+      }
+  },
+  "keywords": [
+    "node-red",
+    "google",
+    "thethingbox",
+    "calendar",
+    "google-calendar"
+  ],
+  "author": "http://www.digitalairways.com/",
+  "license": "http://www.wtfpl.net"
+}
